@@ -1,0 +1,16 @@
+VoiceHome corpus should be unzipped at the root of the project and named "data".
+Modify "main" file to launch different descriptors/classifiers and change the params.
+
+To read 8-channel file, use e.g. sox: play -v 8 FILE -t alsa
+
+In order to have at the same time tensorflow and matlab engine running on archlinux:
+- install python34 (we couldn't get everything working with 3.6 or 3.5)
+$ yaourt python34
+- Create a venv:
+$ virtualenv -p /usr/bin/python34 venv34
+- Use it:
+$ source venv34/bin/activate
+- Install all the packages:
+$ pip install {sklearn,numpy,keras…}
+- Go to MATLAB_ROOT/extern/engines/python
+$ python setup.py install

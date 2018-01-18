@@ -1,0 +1,36 @@
+List of updates since Multichannel_bsslocate v1.0
+-------------------------------------------------
+
+### Multichannel_bsslocate v1.3 (november 2016):
+-------------------------------------------------
+##./mFiles/evaluation_tools/MBSS_eval_angle.m
+# bug fixed :
+- Curvilinear distance is now used for recall computation (old version implies issues with high elevation sources)
+# update :
+- Curvilinear distance is now a new output for accuracy evaluation.
+- Comments
+
+##./examples/example_2/MBSS_audioScene_parameters
+# update:
+- Comments
+
+##./examples/example_2/MBSS_example2.m
+# update:
+- modifications of example outputs (add Precision - add F-measure - add accuracy computed with curvilinear distance) 
+
+
+### Multichannel_bsslocate v1.2 (november 2016):
+-------------------------------------------------
+##./mFiles/localization_tools/MBSS_locate_spec.m
+# bug fixed :
+- Distance between estimated peaks is no longer using euclidian distance but curvilinear abscissa on ppfSpec2D result map (old version implies issues with high elevation results)
+# update :
+- Matlab R2015b update : map color adapted for Matlab R2015b
+
+##release_note.txt added
+
+
+### Multichannel_bsslocate v1.1 :
+---------------------------------
+##./mFiles/MBSS_preprocess.m
+# bug fixed : "alpha" angles computation can no longer lead to complex numbers for weird input values
